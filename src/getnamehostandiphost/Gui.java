@@ -72,7 +72,10 @@ public class Gui extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            jTextField1.setText(InetAddress.getLocalHost().toString());// TODO add your handling code here:
+            String line=InetAddress.getLocalHost().toString();
+            String[] linesplit=line.split("/");
+            jTextField1.setText("Имя компьютера:  "+linesplit[0]);
+            jTextField1.append();
         } catch (UnknownHostException ex) {
             Logger.getLogger(Gui.class.getName()).log(Level.SEVERE, null, ex);
         }
